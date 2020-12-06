@@ -41,7 +41,6 @@ const foodBox = [
 		}
 	]
 function App() {
-  	
 	return (
 		<div className="App">
 			{foodBox.map( food => (
