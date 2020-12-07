@@ -22,11 +22,12 @@ function App() {
 			return <Movies id={movies.id} title={movies.title}/>
 		})
 	}
+	if(isLoading) return <div>is Loading...</div>;
+	if(!movies) return <div>Error!</div>;
 	return (
 		<div className="App">
-			{isLoading ? 'isLoading' : movies.map( movies=>{
-				return <Movies id={movies.id} title={movies.title}/>
-			})}
+			return <Movies id={movies.id} title={movies.title}/>
+		
 		</div>
 	);
 }
