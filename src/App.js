@@ -18,16 +18,19 @@ function App() {
 		console.log('movies : '+movies);
 	},[movies]);
 	const movieMap = ()=>{
-		movies.map( movies=>{
-			return <Movies id={movies.id} title={movies.title}/>
-		})
+		alert('aaaaaaaaaaaaaaa');
+		return(
+			movies.map( movies=>{
+				return <Movies id={movies.id} title={movies.title}/>
+			})
+		);
+		alert('bbbbbbbbbbbbbb')
 	}
 	if(isLoading) return <div>is Loading...</div>;
 	if(!movies) return <div>Error!</div>;
 	return (
 		<div className="App">
-			return <Movies id={movies.id} title={movies.title}/>
-		
+			{movieMap()}
 		</div>
 	);
 }
