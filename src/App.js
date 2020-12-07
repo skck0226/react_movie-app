@@ -24,7 +24,9 @@ function App() {
 	}
 	return (
 		<div className="App">
-			{isLoading ? 'isLoading' :}
+			{isLoading ? 'isLoading' : movies.map( movies=>{
+				return <Movies id={movies.id} title={movies.title}/>
+			})}
 		</div>
 	);
 }
