@@ -3,8 +3,7 @@ import react from 'react';
 function Movies({id, title}){
 	return(
 		<div>
-			<h3>{title}</h3>
-			<h4>{id}</h4>	
+			<h3>{title} {id}</h3>	
 		</div>
 	);
 }

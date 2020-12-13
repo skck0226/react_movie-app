@@ -13,18 +13,17 @@ function App() {
 			setIsLoading(false);	
 		}
 		getMovie();
+		
 	},[]);
 	useEffect(()=>{
 		console.log('movies : '+movies);
 	},[movies]);
 	const movieMap = ()=>{
-		alert('aaaaaaaaaaaaaaa');
 		return(
 			movies.map( movies=>{
 				return <Movies id={movies.id} title={movies.title}/>
 			})
 		);
-		alert('bbbbbbbbbbbbbb')
 	}
 	if(isLoading) return <div>is Loading...</div>;
 	if(!movies) return <div>Error!</div>;
